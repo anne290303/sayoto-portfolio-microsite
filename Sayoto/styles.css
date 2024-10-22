@@ -1,0 +1,970 @@
+/* Overall */
+
+/* Global Styles */
+body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    flex-direction: column;
+}
+
+html, body {
+    scroll-behavior: smooth;
+    overflow: hidden; 
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.208);
+    box-shadow: 0px 0px 30px rgba(95, 95, 96, 0.37);
+    border: 1.5px solid rgba(73, 70, 70, 0.18);
+    padding: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: overline;
+}
+
+.logo-container img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-size: 1.5em;
+    margin: 0;
+    color: #004526;
+    justify-content: center;
+    align-items: center;
+}
+
+nav a {
+    padding: 14px 14px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+nav a:hover {
+    color: #4b5c09;
+}
+
+nav a:not(:last-child) {
+    margin-right: 20px;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+.dropdown a {
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    z-index: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.183);
+}
+.dropdown-content a:hover {
+    background-color: #ffffff00;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* HOME PAGE */
+.home-container {
+    display: flex;
+    padding: 20px;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.home-content {
+    flex: 2;
+    padding: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.home-placeholder {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 4%;
+}
+
+
+.home-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.home-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.559);
+    z-index: 2;
+}
+
+#home-click-for-more, #home-return-top {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+#home-click-for-more:hover, #home-return-top:hover {
+    color:#6a760c;
+}
+
+section.home-section {
+    display: none; 
+}
+
+#home-page1:target, #home-page2:target {
+    display: flex; 
+}
+
+#home-page1 {
+    display: flex; 
+}
+
+.home-skills-container {
+    display: flex;
+    align-items: center;
+    padding: 60px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 60%;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.home-skills-container img {
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.home-skills-container div {
+    font-size: 19px;
+    color: black;
+}
+
+h1.home-h1 {
+    color: #4b5c09;
+    font-size: 1.5em;
+    font-weight: bolder;
+    font-size: 200%;
+}
+
+h2.home-h2 {
+    color: #4b5c09;
+    font-size: 2em;
+    margin-top: 10%;
+    font-family: cursive;
+}
+
+h3.home-h3 {
+    color: #4b5c09;
+    font-size: 2em;
+    margin-bottom: 1px;
+}
+
+
+
+/* ABOUT */
+/* Educational Attainment and Achievements */
+
+h1 {
+    text-align: center; 
+}
+
+h2 {
+    color: #4b5c09;
+    font-size: 2em;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding-top: 2%;
+}
+
+.container .box {
+    position: relative;
+    width: 25%; 
+    height: 350px;
+    background: black;
+    margin-bottom: 20px; 
+    transition: 0.5s;
+    transform-style: preserve-3d;
+    overflow: hidden;
+}
+
+.container:hover .box {
+    transform: rotateY(25deg);
+}
+
+.container .box:hover ~ .box {
+    transform: rotateY(-25deg);
+}
+
+.container .box:hover {
+    transform: rotateY(0deg) scale(1.25);
+    z-index: 1;
+    box-shadow: 0 25px 40px rgba(0,0,0,0.5);
+}
+
+.container .box .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container .box .imgBx:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, black, #666666);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.5s;
+    mix-blend-mode: multiply;
+}
+
+.container .box:hover .imgBx:before {
+    opacity: 1;
+}
+
+.container .box .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .box .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    box-sizing: border-box;
+}
+
+.container .box .content h2 {
+    color: #fff;
+    transition: 0.5s;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    font-size: 15px;
+    transform: translateY(500px);
+}
+
+.container .box:hover .content h2  {
+    transform: translateY(0px);
+    transition-delay: 0.6s;
+}
+
+.container .box .content p {
+    color: #fff;
+    transition: 0.5s;
+    font-size: 14px;
+    transform: translate(1000px);
+}
+
+.container .box:hover .content p {
+    transform: translate(0px);
+    transition-delay: 0.5s;
+}
+
+/* HOBBIES */
+
+.hobbies-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.hobbies-box {
+    position: relative;
+    width: 49%; 
+    height: 650px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin-bottom: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+}
+
+.hobbies-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.hobbies-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); 
+}
+
+.hobbies-box h3 {
+    position: relative;
+    z-index: 2;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.click-more-btn {
+    position: absolute;
+    bottom: 25px;
+    background-color: #4b5c09;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    text-decoration: none;
+    z-index: 2;
+    transition: background-color 0.3s ease;
+}
+
+.click-more-btn:hover {
+    background-color: #6a760c;
+}
+
+.hobbies-title {
+    color: #4b5c09;
+    font-size: 2.5em;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 30px;
+}
+
+.hobbies-section .hobbies-box:nth-child(1) {
+    background: url('images/music.jpg') no-repeat center center/cover; 
+}
+
+.hobbies-section .hobbies-box:nth-child(2) {
+    background: url('images/watching.jpg') no-repeat center center/cover; 
+}
+
+.kdrama-background {
+    background-color: #e9e6e6;
+}
+
+
+/* Back Button Styles */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #4e542c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 2%;
+}
+
+.back-btn:hover {
+    background-color: #6a760c;
+}
+
+
+/* K-Drama and Music */
+.kdrama-page, .music-page{
+    display: none;
+}
+
+.kdrama-page:target, .music-page:target {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.kdrama-content, .music-content {
+    flex: 1;
+    padding: 50px;
+    font-size: 18px;
+    text-align: left;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+.kdrama-title, .music-title {
+    color: #4b5c09;
+    font-size: 2em;
+    margin-top: 5cm;
+    text-align: center;
+}
+
+.kdrama-image, .music-image {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+.kdrama-image img, .music-image img {
+    width: 320px;
+    height: 500px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.kdrama-image img:hover, .music-image img:hover {
+    transform: scale(1.05);
+}
+
+
+.kdrama-h1, .music-h1 {
+    color: #4e542c;
+    font-size: 2em;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.kdrama-h2, .music-h2 {
+    color: #4e542c;
+    font-size: 25px;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+
+/* WORKS */
+/* Illustrations */
+.illustration-page:target {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.illustration-content {
+    flex: 1;
+    padding: 50px;
+    font-size: 19px;
+    text-align: left;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+.illustration-title {
+    color: #4b5c09;
+    font-size: 2em;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.illustration-h2 {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 1px;
+    text-align: left;
+    text-decoration: solid;
+}
+
+.illustration-h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 1px;
+    text-align: left;
+    text-decoration: solid;
+    text-indent: 2%;
+}
+
+.illustration-image {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+    padding-right: 10%;
+    padding-top: 2%;
+}
+
+.illustration-image img {
+    width: 380px;
+    height: 530px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.illustration-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Pagination Styles */
+.pagination-container {
+    position: fixed;
+    bottom: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.pagination {
+    margin-top: auto; 
+    display: flex;
+    justify-content: center; 
+    padding: 20px 0;
+}
+
+.pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #4e542c;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+}
+
+.pagination button:hover {
+    background-color: #4e542c; 
+}
+
+/* photography */
+.photography-content-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.photography-content {
+    flex: 1;
+    padding: 70px;
+    font-size: 20px;
+    text-align: left;
+    justify-content: center;
+}
+
+.photography-image-gallery {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 250px;
+    margin-top: 3%;
+}
+
+.photography-image-gallery img {
+    width: 500px;  
+    height: 500px;
+    object-fit: cover; 
+    display: none;
+}
+
+.photography-image-gallery-2 {
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: 3%;
+}
+
+.photography-image-gallery-2 img {
+    width: 650px;  
+    height: 450px;
+    object-fit: cover;
+    display: none;
+}
+
+.photography-pagination {
+    margin-top: 20px;
+}
+
+.photography-pagination a {
+    margin: 0 5px;
+    text-decoration: none;
+    padding: 8px 16px;
+    background-color: #f1f1f1;
+    color: #000;
+    border: 1px solid #ccc;
+}
+
+.photography-pagination a:hover {
+    background-color: #ccc;
+}
+
+nav a {
+    margin-right: 20px; 
+}
+
+.photography-h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.photography-h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 15px;
+}
+
+#Click-for-more, #return-top {
+    display: block;
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+#Click-for-more:hover, #return-top:hover {
+    color: #6a760c;
+}
+
+/* Page 2 Styles */
+section {
+    display: none; 
+}
+
+#page1:target, #page2:target {
+    display: flex; 
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#page1 {
+    display: flex; 
+}
+
+
+
+/* Animation Page Styles */
+.animation-title {
+    color: #4b5c09;
+    font-size: 2em;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.animation-content {
+    flex: 1;
+    padding: 70px;
+    font-size: 20px;
+    text-align: left;
+    justify-content: center;
+}
+
+.animation-page {
+    display: none;
+}
+
+
+.animation-h2 {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.animation-h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-top: 5px;
+    text-align: left;
+    text-decoration: solid;
+    text-indent: 2%;
+}
+
+.animation-video {
+    flex: 1;
+}
+
+.animation-video video {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    margin-top: 10%;
+}
+
+.animation-pagination {
+    margin-top: auto; 
+    display: flex;
+    justify-content: center; 
+    padding: 20px 0;
+}
+
+.animation-pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #4e542c;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+}
+
+.animation-pagination button:hover {
+    background-color: #555;
+}
+
+
+
+/* Hire Me Page */
+.contact-container {
+    background-color: #f1f1f1; 
+    padding: 30px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 60%; 
+    max-width: 1200px;
+    margin: 40px auto; 
+    text-align: left;
+}
+
+.contact-container h2 {
+    color: #283009;
+    font-size: 2.0em;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding-left: 34%;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.contact-item p {
+    font-size: 1.2em;
+    color: #333;
+    margin: 0;
+}
+
+.download-resume {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-button {
+    padding: 12px 30px;
+    background-color: #4b5c09; 
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+    background-color: #3b4708; 
+}
+
+.resume-button:active {
+    background-color: #2d3a06; 
+}
+
+.intro-paragraph {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #1f3110;
+    margin-bottom: 20px;
+    text-align: center; 
+}
+
+/* microsite */
+.kdrama-table {
+    width: 90%; 
+    margin: 0 auto; 
+    border-collapse: collapse;
+    background-color: rgba(169, 166, 166, 0.5);  
+    color: #000000;
+    padding: 100px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+    justify-content: center;
+    opacity: 1;
+}
+.kdrama-table th, .kdrama-table td {
+    border: 1px solid #4e542c;
+    padding: 14px;
+}
+.kdrama-table th {
+    background-color: #4e542c;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bolder;
+}
+.kdrama-table img {
+    width: 100px;
+    height: auto;
+}
+
+.kdrama-pagination {
+    margin-top: auto; 
+    display: flex;
+    justify-content: center; 
+    padding: 20px 0;
+}
+.kdrama-pagination button {
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: none;
+    background-color: #4e542c;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px; 
+}
+.kdrama-pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.kdrama-table th:nth-child(1),
+.kdrama-table td:nth-child(1) {
+    width: 10%; /* Picture */
+}
+.kdrama-table th:nth-child(2),
+.kdrama-table td:nth-child(2) {
+    width: 8%; /* Title */
+}
+.kdrama-table th:nth-child(3),
+.kdrama-table td:nth-child(3) {
+    width: 8%; /* Number of Episodes */
+}
+.kdrama-table th:nth-child(4),
+.kdrama-table td:nth-child(4) {
+    width: 8%; /* Genre */
+}
+.kdrama-table th:nth-child(5),
+.kdrama-table td:nth-child(5) {
+    width: 10%; /* Main Cast */
+}
+.kdrama-table th:nth-child(6),
+.kdrama-table td:nth-child(6) {
+    width: 20%; /* Synopsis */
+}
+.kdrama-table th:nth-child(7),
+.kdrama-table td:nth-child(7) {
+    width: 30%; /* Personal Comment */
+}
+
